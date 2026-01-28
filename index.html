@@ -68,13 +68,18 @@
         }
 
         .country-card {
-            border: 1px solid #f1f5f9;
+            border: 2px solid #f1f5f9;
             transition: all 0.2s ease;
             background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
         .country-card:hover {
             border-color: #1E40AF;
             background-color: #f8faff;
+            transform: scale(1.02);
         }
 
         .premium-card {
@@ -87,11 +92,11 @@
 
         .authorized-seal {
             border: 2px solid #1E40AF;
-            padding: 1rem;
+            padding: 1.25rem;
             border-radius: 1rem;
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.25rem;
             background: #f8faff;
         }
 
@@ -104,7 +109,7 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- NOTIFICATION MODAL (Manually triggered only) -->
+    <!-- NOTIFICATION MODAL -->
     <div id="custom-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
         <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center border border-slate-100">
             <div class="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -153,8 +158,8 @@
         </nav>
 
         <!-- HERO SECTION -->
-        <section class="relative w-full min-h-[550px] flex items-center bg-white overflow-hidden border-b border-slate-50">
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 skew-x-[-15deg] translate-x-24 hidden lg:block"></div>
+        <section class="relative w-full min-h-[500px] flex items-center bg-white overflow-hidden border-b border-slate-50">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 skew-x-[-15deg] translate-x-24 hidden lg:block"></div>
             
             <div class="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center py-16 md:py-28">
                 <div class="max-w-xl text-center md:text-left">
@@ -170,60 +175,45 @@
                     <button onclick="scrollToSelection()" class="px-12 py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest transition-all">
                         <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
                     </button>
-                    <div class="mt-12 flex items-center justify-center md:justify-start gap-4">
-                        <div class="flex text-yellow-400 text-xs gap-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider">Direct from Official Warehouse</span>
-                    </div>
                 </div>
                 <div class="relative flex justify-center lg:justify-end">
                     <div class="absolute inset-0 bg-blue-100/40 blur-[120px] rounded-full"></div>
-                    <img src="images/mancode.png" alt="Mancode Product Bottle" class="relative z-10 w-full max-w-[300px] md:max-w-[380px] h-auto drop-shadow-2xl">
+                    <img src="images/mancode.png" alt="Mancode Gummies" class="relative z-10 w-full max-w-[280px] md:max-w-[340px] h-auto drop-shadow-2xl">
                 </div>
             </div>
         </section>
 
-        <!-- COUNTRY SELECTION -->
-        <section id="country-selection" class="py-16 bg-slate-50 border-b border-slate-100">
-            <div class="container mx-auto px-4 max-w-3xl text-center">
-                <h2 class="text-2xl font-black text-slate-900 mb-2 uppercase tracking-tighter" data-i18n="select_title">Select Shipping Destination</h2>
-                <p class="text-slate-400 text-sm font-medium mb-10">Access local priority shipping links from our authorized centers.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card flex items-center justify-between gap-3 py-5 px-6 rounded-2xl shadow-sm group">
-                        <div class="flex items-center gap-4">
-                            <img src="https://flagcdn.com/w40/ca.png" class="w-7 h-auto rounded-sm" alt="CA">
-                            <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Canada</span>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-slate-300 group-hover:text-brand-blue"></i>
+        <!-- COUNTRY SELECTION (ALINHADA E PADRONIZADA) -->
+        <section id="country-selection" class="py-20 bg-slate-50 border-b border-slate-100">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter" data-i18n="select_title">Select Shipping Destination</h2>
+                <p class="text-slate-500 text-base md:text-lg font-medium mb-12">Authorized priority shipping routes for the 2026 performance line.</p>
+                
+                <div class="grid grid-cols-2 gap-4 md:gap-6 justify-items-center">
+                    <!-- Canada -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card py-6 px-4 rounded-2xl shadow-sm group">
+                        <img src="https://flagcdn.com/w80/ca.png" class="w-8 md:w-10 h-auto rounded-sm" alt="CA">
+                        <span class="font-black text-lg md:text-xl text-slate-900 group-hover:text-brand-blue ml-4">Canada</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card flex items-center justify-between gap-3 py-5 px-6 rounded-2xl shadow-sm group">
-                        <div class="flex items-center gap-4">
-                            <img src="https://flagcdn.com/w40/au.png" class="w-7 h-auto rounded-sm" alt="AU">
-                            <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Australia</span>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-slate-300 group-hover:text-brand-blue"></i>
+                    <!-- Australia -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card py-6 px-4 rounded-2xl shadow-sm group">
+                        <img src="https://flagcdn.com/w80/au.png" class="w-8 md:w-10 h-auto rounded-sm" alt="AU">
+                        <span class="font-black text-lg md:text-xl text-slate-900 group-hover:text-brand-blue ml-4">Australia</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card flex items-center justify-between gap-3 py-5 px-6 rounded-2xl shadow-sm group">
-                        <div class="flex items-center gap-4">
-                            <img src="https://flagcdn.com/w40/pr.png" class="w-7 h-auto rounded-sm" alt="PR">
-                            <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Puerto Rico</span>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-slate-300 group-hover:text-brand-blue"></i>
+                    <!-- Puerto Rico -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card py-6 px-4 rounded-2xl shadow-sm group">
+                        <img src="https://flagcdn.com/w80/pr.png" class="w-8 md:w-10 h-auto rounded-sm" alt="PR">
+                        <span class="font-black text-lg md:text-xl text-slate-900 group-hover:text-brand-blue ml-4">Puerto Rico</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card flex items-center justify-between gap-3 py-5 px-6 rounded-2xl shadow-sm group">
-                        <div class="flex items-center gap-4">
-                            <img src="https://flagcdn.com/w40/ie.png" class="w-7 h-auto rounded-sm" alt="IE">
-                            <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Ireland</span>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-slate-300 group-hover:text-brand-blue"></i>
+                    <!-- Ireland -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card py-6 px-4 rounded-2xl shadow-sm group">
+                        <img src="https://flagcdn.com/w80/ie.png" class="w-8 md:w-10 h-auto rounded-sm" alt="IE">
+                        <span class="font-black text-lg md:text-xl text-slate-900 group-hover:text-brand-blue ml-4">Ireland</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card flex items-center justify-between gap-3 py-5 px-6 rounded-2xl shadow-sm group col-span-2">
-                        <div class="flex items-center gap-4">
-                            <img src="https://flagcdn.com/w40/nz.png" class="w-7 h-auto rounded-sm" alt="NZ">
-                            <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">New Zealand (Official Distribution)</span>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-slate-300 group-hover:text-brand-blue"></i>
+                    <!-- New Zealand (Padronizado na grid de 2 colunas) -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card py-6 px-4 rounded-2xl shadow-sm group col-span-2 md:col-span-1">
+                        <img src="https://flagcdn.com/w80/nz.png" class="w-8 md:w-10 h-auto rounded-sm" alt="NZ">
+                        <span class="font-black text-lg md:text-xl text-slate-900 group-hover:text-brand-blue ml-4">New Zealand</span>
                     </a>
                 </div>
             </div>
@@ -252,23 +242,23 @@
         </section>
 
         <!-- TRUST SECTION -->
-        <section class="py-14 bg-slate-50 border-y border-slate-100">
+        <section class="py-16 bg-slate-50 border-y border-slate-100">
             <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div class="space-y-3">
-                    <i class="fas fa-badge-check text-brand-blue text-2xl"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Authorized Reseller</p>
+                    <i class="fas fa-badge-check text-brand-blue text-3xl"></i>
+                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-600">Authorized Reseller</p>
                 </div>
                 <div class="space-y-3">
-                    <i class="fas fa-leaf text-brand-blue text-2xl"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Pure Matrix</p>
+                    <i class="fas fa-leaf text-brand-blue text-3xl"></i>
+                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-600">Pure Matrix</p>
                 </div>
                 <div class="space-y-3">
-                    <i class="fas fa-shield-check text-brand-blue text-2xl"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Encrypted Security</p>
+                    <i class="fas fa-shield-check text-brand-blue text-3xl"></i>
+                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-600">Encrypted Security</p>
                 </div>
                 <div class="space-y-3">
-                    <i class="fas fa-shipping-fast text-brand-blue text-2xl"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Global Priority</p>
+                    <i class="fas fa-shipping-fast text-brand-blue text-3xl"></i>
+                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-600">Global Priority</p>
                 </div>
             </div>
         </section>
@@ -278,7 +268,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="benefits_title">Master Your Protocol</h2>
-                    <p class="text-slate-400 font-medium max-w-2xl mx-auto" data-i18n="benefits_sub">Experience the 3-tier optimization system built into every gummy.</p>
+                    <p class="text-slate-400 font-medium max-w-2xl mx-auto" data-i18n="benefits_sub">Experience the 3-tier optimization system built into every serving.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="premium-card p-12 rounded-3xl group transition-all">
@@ -293,7 +283,7 @@
                             <i class="fas fa-dumbbell"></i>
                         </div>
                         <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_2_t">Peak Vitality</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Designed to contribute to overall male vitality and daily physical drive naturally and reliably.</p>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Formulated to contribute to overall male vitality and daily physical drive naturally and reliably.</p>
                     </div>
                     <div class="premium-card p-12 rounded-3xl group transition-all">
                         <div class="w-14 h-14 bg-slate-50 text-brand-blue rounded-xl flex items-center justify-center mb-8 text-2xl group-hover:bg-brand-blue group-hover:text-white transition-all shadow-sm">
@@ -344,11 +334,10 @@
             <div class="container mx-auto px-4 max-w-6xl">
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-center md:text-left">
                     <div class="lg:col-span-2">
-                        <img src="images/mancode-logo.png" class="h-6 mb-8 mx-auto md:mx-0 opacity-90" alt="Mancode">
+                        <img src="images/mancode-logo.png" class="h-6 mb-8 mx-auto md:mx-0 opacity-80" alt="Mancode">
                         <p class="text-slate-400 text-xs leading-relaxed max-w-sm mx-auto md:mx-0">
                             Authorized Reseller for Mancode Performance Group. Elite optimization delivered in high-bioavailability gummies.
                         </p>
-                        <!-- NEW AUTHORIZED SEAL IN FOOTER -->
                         <div class="mt-8 flex justify-center md:justify-start">
                             <div class="authorized-seal">
                                 <i class="fas fa-shield-check text-brand-blue text-3xl"></i>
@@ -378,7 +367,7 @@
 
                 <!-- COMPLIANCE DISCLAIMER -->
                 <div class="border-t border-slate-100 pt-12 mb-12 text-[9px] text-slate-400 leading-relaxed text-center max-w-5xl mx-auto italic">
-                    <p class="mb-4">*These statements have not been evaluated by any local or international health authority. Mancode Gummies is a dietary supplement and not intended to treat or cure any condition. Results may vary. Always consult a healthcare professional. We are an official authorized reseller of Mancode Performance products.</p>
+                    <p class="mb-4">*These statements have not been evaluated by any health authority. Mancode Gummies is a dietary supplement and not intended to treat or cure any condition. Results may vary. Always consult a professional. We are an official authorized reseller of Mancode products.</p>
                 </div>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-slate-50">
@@ -410,20 +399,11 @@
                 <p>This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from this Authorized Reseller platform.</p>
                 <h2>PERSONAL INFORMATION WE COLLECT</h2>
                 <p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device.</p>
-                <h3>Technologies used:</h3>
-                <ul>
-                    <li>"Cookies" are data files that are placed on your device or computer and often include an anonymous unique identifier.</li>
-                    <li>"Log files" track actions occurring on the Site, and collect data including your IP address, browser type, etc.</li>
-                </ul>
             </div>
             <div id="terms-content" class="hidden-section">
                 <h1 class="text-4xl font-black text-slate-900 mb-10">Terms of Service</h1>
                 <h3>OVERVIEW</h3>
                 <p>By visiting our site and/ or purchasing something from us, you engage in our "Service" provided by an official authorized partner and agree to be bound by the following terms and conditions.</p>
-                <h3>SECTION 1 - ONLINE STORE TERMS</h3>
-                <p>By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence.</p>
-                <h3>SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h3>
-                <p>We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>
             </div>
         </div>
     </div>
@@ -436,16 +416,6 @@
                 hero_badge: "Authorized Reseller Platform",
                 hero_subtitle: "Consistency, confidence, and control. Support your daily drive, stamina, and male vitality — all in a simple daily formula.",
                 cta_button: "CLAIM YOUR SUPPLY",
-                phil_header: "The Mancode Standard",
-                phil_1: "Performance isn’t about extremes.",
-                phil_2: "It’s about consistency, confidence, and control.",
-                phil_3: "Mancode Gummies were created for men who want to stay energized, focused, and ready — without complicated routines or aggressive solutions.",
-                phil_4: "A simple daily formula designed to support drive, stamina, and male vitality, so you can perform at your best, on your terms.",
-                phil_5: "Real strength isn’t loud.",
-                phil_6: "IT’S RELIABLE.",
-                benefits_title: "Master Your Protocol",
-                benefits_sub: "Experience the 3-tier optimization system built into every serving.",
-                ben_1_t: "Constant Surge", ben_1_d: "Fuel your body with natural metabolic energy to help manage your schedule effectively.",
                 select_title: "Select Shipping Destination",
                 rev_title: "Community Feedback"
             },
@@ -455,16 +425,6 @@
                 hero_badge: "Plataforma de Distribuidor Autorizado",
                 hero_subtitle: "Consistencia, confianza y control. Apoye su energía diaria y vitalidad masculina en uma fórmula de gomitas avanzada.",
                 cta_button: "PIDE TU SUMINISTRO",
-                phil_header: "El Estándar Mancode",
-                phil_1: "El rendimiento no se trata de extremos.",
-                phil_2: "Se trata de consistencia, confianza y control.",
-                phil_3: "Mancode Gummies fueron creadas para hombres que quieren mantenerse con energía y enfocados sin rutinas complicadas.",
-                phil_4: "Una fórmula diaria simple diseñada para apoyar tu vitalidad, para que rindas al máximo, bajo tus términos.",
-                phil_5: "La verdadera fuerza no es ruidosa.",
-                phil_6: "ES CONFIABLE.",
-                benefits_title: "Domina tu Protocolo",
-                benefits_sub: "Experimente o sistema de optimización de 3 niveles en cada servicio.",
-                ben_1_t: "Energía Constante", ben_1_d: "Energía metabólica natural para manejar tu horario sin caídas de energía.",
                 select_title: "Seleccionar Destino",
                 rev_title: "Resultados de la Comunidad"
             }
@@ -515,7 +475,6 @@
 
         window.onload = () => {
             const userLang = navigator.language.split('-')[0];
-            // Set language based on user locale for listed countries
             if (userLang === 'es') {
                 setLanguage('es', 'pr');
             } else {
