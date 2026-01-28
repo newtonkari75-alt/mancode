@@ -114,16 +114,16 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- MODAL DE AVISO (Trigger manual) -->
-    <div id="custom-modal" class="fixed inset-0 z-[150] hidden flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
+    <!-- MODAL DE AVISO (Apenas se necessário manualmente) -->
+    <div id="custom-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
         <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center border border-slate-100">
             <div class="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-shipping-fast text-2xl"></i>
+                <i class="fas fa-info-circle text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-2 text-slate-900" id="modal-title">Shipping Notice</h3>
+            <h3 class="text-xl font-bold mb-2 text-slate-900" id="modal-title">Official Update</h3>
             <p class="text-slate-600 mb-6 text-sm leading-relaxed" id="modal-text"></p>
             <button onclick="closeModal()" class="w-full py-3.5 bg-brand-blue text-white font-black rounded-xl hover:opacity-90 transition-all uppercase tracking-widest text-[10px]">
-                CONTINUE
+                UNDERSTOOD
             </button>
         </div>
     </div>
@@ -131,9 +131,9 @@
     <!-- MAIN PAGE -->
     <div id="landing-page">
         
-        <!-- BARRA SUPERIOR - Com Envio Dinâmico -->
+        <!-- TOP ALERT BAR -->
         <div class="bg-brand-blue text-white text-[10px] font-black py-3 text-center uppercase tracking-[0.2em] px-4">
-            <span data-i18n="top_bar">LIMITED 2026 EDITION | SHIPPING STARTS FROM <span class="text-yellow-400 next-business-day">...</span></span>
+            <span data-i18n="top_bar">LIMITED 2026 EDITION | SHIPPING STARTS FROM <span class="text-yellow-400 next-business-day font-black">...</span></span>
         </div>
 
         <!-- NAVIGATION -->
@@ -141,6 +141,8 @@
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-4">
                     <img src="images/mancode-logo.png" alt="Mancode Logo" class="h-6 md:h-8 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="hidden sm:block h-6 w-px bg-slate-200"></div>
+                    <span class="hidden sm:block text-[9px] font-black text-brand-blue tracking-[0.1em] uppercase">Official Partner</span>
                 </div>
                 
                 <div class="flex items-center gap-4 lg:gap-8">
@@ -168,21 +170,21 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
                         <div class="inline-flex bg-brand-blue/10 text-brand-blue text-[10px] font-black px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded-md" data-i18n="hero_badge">
-                            Premium Performance Formula
+                            Premium Performance Protocol
                         </div>
                         <h1 class="text-slate-900 text-5xl md:text-7xl font-black mb-8 leading-[1.1]">
                             Upgrade Your <span class="text-brand-blue">Mancode</span>
                         </h1>
                         <p class="text-slate-500 text-lg md:text-xl font-medium mb-12 leading-relaxed max-w-lg" data-i18n="hero_subtitle">
-                            Consistency, confidence, and control. Support your daily drive, stamina, and male vitality — all in one simple advanced formula.
+                            Consistency, confidence, and control. Support your drive, stamina, and male vitality with our simple daily optimized formula.
                         </p>
-                        <!-- Desktop Button -->
+                        <!-- Desktop CTA -->
                         <div class="hidden md:block">
                             <button onclick="scrollToSelection()" class="px-12 py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest transition-all">
                                 <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
                             </button>
-                            <p class="mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest text-center md:text-left">
-                                NEXT SHIPMENT: <span class="text-brand-blue next-business-day">...</span>
+                            <p class="mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                NEXT DISPATCH: <span class="text-brand-blue next-business-day font-black">...</span>
                             </p>
                         </div>
                     </div>
@@ -193,13 +195,13 @@
                             <img src="images/mancode.png" alt="Mancode Gummies" class="relative z-10 w-full max-w-[280px] md:max-w-[340px] h-auto drop-shadow-2xl">
                         </div>
 
-                        <!-- Mobile Button (Visible after photo) -->
+                        <!-- Mobile CTA (reposicionado conforme solicitado) -->
                         <div class="md:hidden mt-10 w-full">
                             <button onclick="scrollToSelection()" class="w-full py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest transition-all shadow-xl">
                                 <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
                             </button>
                             <p class="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
-                                NEXT SHIPMENT: <span class="text-brand-blue next-business-day">...</span>
+                                NEXT DISPATCH: <span class="text-brand-blue next-business-day font-black">...</span>
                             </p>
                         </div>
                     </div>
@@ -207,30 +209,36 @@
             </div>
         </section>
 
-        <!-- SELEÇÃO DE PAÍS -->
+        <!-- COUNTRY SELECTION -->
         <section id="country-selection" class="py-16 bg-slate-50 border-b border-slate-100">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-black text-slate-900 mb-2 uppercase tracking-tighter" data-i18n="select_title">Select Shipping Destination</h2>
-                <p class="text-slate-400 text-sm font-medium mb-10 uppercase tracking-widest">Fast priority dispatch starts <span class="text-brand-blue next-business-day">...</span></p>
+                <p class="text-slate-400 text-sm font-medium mb-10 uppercase tracking-widest">Priority 2026 Distribution Routes</p>
                 
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto items-center justify-center">
-                    <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card flex items-center justify-center gap-3 px-4 rounded-2xl shadow-sm group">
+                <!-- Grid de 2 colunas perfeitamente alinhada -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+                    <!-- Canada -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/ca.png" class="w-7 h-auto" alt="CA">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Canada</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card flex items-center justify-center gap-3 px-4 rounded-2xl shadow-sm group">
+                    <!-- Australia -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/au.png" class="w-7 h-auto" alt="AU">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Australia</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card flex items-center justify-center gap-3 px-4 rounded-2xl shadow-sm group">
+                    <!-- Puerto Rico -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/pr.png" class="w-7 h-auto" alt="PR">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Puerto Rico</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card flex items-center justify-center gap-3 px-4 rounded-2xl shadow-sm group">
+                    <!-- Ireland -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/ie.png" class="w-7 h-auto" alt="IE">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Ireland</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card flex items-center justify-center gap-3 px-4 rounded-2xl shadow-sm group col-span-2 md:col-span-1">
+                    <!-- New Zealand (Padronizado) -->
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/nz.png" class="w-7 h-auto" alt="NZ">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">New Zealand</span>
                     </a>
@@ -304,21 +312,21 @@
                     <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
                         <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Ordering was smooth. Fast shipping and the gummy quality is exactly what I needed for my daily routine."</p>
                         <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=15" class="w-11 h-11 rounded-full grayscale" alt="James">
+                            <img src="https://i.pravatar.cc/100?u=1" class="w-11 h-11 rounded-full grayscale" alt="James">
                             <div><p class="font-black text-slate-900 text-xs">James L.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Toronto, CA</p></div>
                         </div>
                     </div>
                     <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
                         <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Shipping to Australia was seamless. Focus boost is immediate without any shakiness. Very impressed."</p>
                         <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=16" class="w-11 h-11 rounded-full grayscale" alt="Mark">
+                            <img src="https://i.pravatar.cc/100?u=2" class="w-11 h-11 rounded-full grayscale" alt="Mark">
                             <div><p class="font-black text-slate-900 text-xs">Mark S.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Sydney, AU</p></div>
                         </div>
                     </div>
                     <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
                         <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Game changer. My concentration feels sharper and I genuinely appreciate the natural ingredient profile."</p>
                         <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=17" class="w-11 h-11 rounded-full grayscale" alt="User">
+                            <img src="https://i.pravatar.cc/100?u=3" class="w-11 h-11 rounded-full grayscale" alt="User">
                             <div><p class="font-black text-slate-900 text-xs">Connor D.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Dublin, IE</p></div>
                         </div>
                     </div>
@@ -346,15 +354,15 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Official Contact</h4>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Support Center</h4>
                         <ul class="space-y-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                            <li><button onclick="openChat()" class="hover:text-brand-blue">Support Center</button></li>
+                            <li><button onclick="openChat()" class="hover:text-brand-blue">Contact Support</button></li>
                             <li>SUPPORT@MANCODEGUMMIES.COM</li>
-                            <li class="opacity-60 text-[9px]">Performance Way, Delaware, USA</li>
+                            <li class="opacity-60 text-[9px]">Delaware Hub, USA</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Information</h4>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Legal Info</h4>
                         <ul class="space-y-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                             <li><button onclick="showPolicy('privacy')" class="hover:text-brand-blue">Privacy Policy</button></li>
                             <li><button onclick="showPolicy('terms')" class="hover:text-brand-blue">Terms of Service</button></li>
@@ -362,12 +370,13 @@
                     </div>
                 </div>
 
+                <!-- COMPLIANCE DISCLAIMER -->
                 <div class="border-t border-slate-100 pt-12 mb-12 text-[10px] text-slate-500 leading-relaxed text-center max-w-5xl mx-auto italic">
-                    <p class="mb-4">DISCLAIMER: *These statements have not been evaluated by the FDA or any other medical authority. This product is not intended to diagnose, treat, cure, or prevent any disease. Results are based on individual metabolism and consistency. All shipments processed through official certified distribution hubs.</p>
+                    <p class="mb-4">DISCLAIMER: *These statements have not been evaluated by any governmental health authority. This product is a food supplement and is not intended to treat, cure, or prevent any medical condition. Individual results are subject to factors such as metabolism and consistent usage. All orders are processed through verified certified distribution hubs. © 2026 Mancode Performance Group.</p>
                 </div>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-slate-50">
-                    <p class="text-[10px] font-black text-slate-400 tracking-widest uppercase">© 2026 Mancode Performance Group.</p>
+                    <p class="text-[10px] font-black text-slate-400 tracking-widest uppercase">© 2026 Mancode Authorized Performance Group.</p>
                     <div class="flex gap-6 opacity-30 grayscale items-center text-xl">
                         <i class="fab fa-cc-visa"></i>
                         <i class="fab fa-cc-mastercard"></i>
@@ -379,8 +388,8 @@
         </footer>
     </div>
 
-    <!-- LEGAL MODAL -->
-    <div id="legal-page" class="hidden-section fixed inset-0 z-[200] bg-white overflow-y-auto">
+    <!-- MODAL PAGES -->
+    <div id="legal-page" class="hidden-section fixed inset-0 z-[250] bg-white overflow-y-auto">
         <div class="border-b border-slate-100 py-6 px-4 sticky top-0 bg-white/98 backdrop-blur-md">
             <div class="container mx-auto max-w-4xl flex justify-between items-center">
                 <div class="font-black text-brand-blue text-lg tracking-tighter uppercase">MANCODE GUMMIES</div>
@@ -403,16 +412,15 @@
     </div>
 
     <script>
-        // Função para calcular o próximo dia útil (exclui Sáb/Dom)
+        // Função para calcular o próximo dia útil
         function getNextBusinessDay() {
             const now = new Date();
             let next = new Date(now);
             next.setDate(now.getDate() + 1);
             
-            // 0: Domingo, 6: Sábado
-            if (next.getDay() === 0) { // Se for Domingo, pula pra Segunda
+            if (next.getDay() === 0) { 
                 next.setDate(next.getDate() + 1);
-            } else if (next.getDay() === 6) { // Se for Sábado, pula pra Segunda
+            } else if (next.getDay() === 6) { 
                 next.setDate(next.getDate() + 2);
             }
             
@@ -424,8 +432,8 @@
             en: {
                 top_bar: "LIMITED 2026 EDITION | SHIPPING STARTS FROM ",
                 nav_philosophy: "PHILOSOPHY", nav_benefits: "BENEFITS", nav_reviews: "REVIEWS",
-                hero_badge: "Premium Performance Formula",
-                hero_subtitle: "Consistency, confidence, and control. Support your daily drive, stamina, and male vitality — all in a simple daily formula.",
+                hero_badge: "Premium Performance Protocol",
+                hero_subtitle: "Consistency, confidence, and control. Support your drive, stamina, and male vitality with our simple daily optimized formula.",
                 cta_button: "CLAIM YOUR SUPPLY",
                 select_title: "Select Shipping Destination",
                 rev_title: "Community Feedback"
@@ -433,8 +441,8 @@
             es: {
                 top_bar: "EDICIÓN LIMITADA 2026 | ENVÍO A PARTIR DE ",
                 nav_philosophy: "FILOSOFÍA", nav_benefits: "BENEFICIOS", nav_reviews: "RESEÑAS",
-                hero_badge: "Fórmula de Rendimiento Premium",
-                hero_subtitle: "Consistencia, confianza y control. Apoye su energía diaria y vitalidad masculina en uma fórmula de gomitas avanzada.",
+                hero_badge: "Protocolo de Rendimiento Premium",
+                hero_subtitle: "Consistencia, confianza y control. Apoye su energía, resistencia e vitalidad masculina con nuestra fórmula diaria simplificada.",
                 cta_button: "PIDE TU SUMINISTRO",
                 select_title: "Seleccionar Destino",
                 rev_title: "Resultados de la Comunidad"
@@ -447,7 +455,7 @@
                 const key = el.getAttribute('data-i18n');
                 if (current[key]) {
                     if (key === 'top_bar') {
-                        el.innerHTML = current[key] + `<span class="text-yellow-400 next-business-day">${getNextBusinessDay()}</span>`;
+                        el.innerHTML = current[key] + `<span class="text-yellow-400 next-business-day font-black uppercase">${getNextBusinessDay()}</span>`;
                     } else {
                         el.innerText = current[key];
                     }
@@ -473,7 +481,7 @@
         }
 
         function openChat() {
-            showModal("Official Support", "For assistance with shipping or orders, contact support@mancodegummies.com. Our team responds within 24 business hours.");
+            showModal("Support Center", "Our authorized support team is available at support@mancodegummies.com. We prioritize all member inquiries within 24 hours.");
         }
 
         function showPolicy(type) {
@@ -491,7 +499,7 @@
         }
 
         window.onload = () => {
-            // Aplicar data dinâmica em todos os placeholders
+            // Aplicar data dinámica
             document.querySelectorAll('.next-business-day').forEach(el => {
                 el.innerText = getNextBusinessDay();
             });
