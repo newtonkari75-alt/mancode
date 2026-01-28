@@ -8,12 +8,21 @@
     <script src="https://api.raads.com.br/code/8300-e0ad75a6-087d-4a9e-9d92-0eed9adb21a9"></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="mancode-logo.png">
+    <link rel="icon" type="image/png" href="images/mancode-logo.png">
 
     <!-- SEO & Meta Tags -->
     <title>Mancode Gummies - Elite Men's Performance Formula</title>
-    <meta name="description" content="Official Mancode Gummies Store. Natural formula designed for male vitality and performance. Fast shipping to Canada, Australia, Puerto Rico, Ireland, and New Zealand.">
+    <meta name="description" content="Official Mancode Gummies Store. High-potency natural formula designed for male vitality, energy, and peak performance. Fast shipping to AU, CA, NZ, IE, and PR.">
+    <meta name="keywords" content="mancode gummies, mancode, male enhancement, energy gummies, stamina support, male vitality">
+    <link rel="canonical" href="https://mancodegummies.vercel.app/">
     
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mancodegummies.vercel.app/">
+    <meta property="og:title" content="Mancode Gummies - Elite Performance Formula">
+    <meta property="og:description" content="Upgrade your Mancode. Consistency, confidence, and control in a simple daily gummy.">
+    <meta property="og:image" content="images/mancode.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,9 +31,9 @@
                     colors: {
                         brand: {
                             blue: '#1E40AF', 
-                            navy: '#1e293b', 
+                            navy: '#0f172a', 
                             accent: '#3b82f6',
-                            light: '#f8fafc', 
+                            slate: '#f8fafc',
                         }
                     }
                 }
@@ -32,49 +41,58 @@
         }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
-        .flag-btn { transition: all 0.2s ease-in-out; cursor: pointer; opacity: 0.6; border: 1px solid #e2e8f0; }
-        .flag-btn:hover, .flag-btn.active { transform: scale(1.1); opacity: 1; border-color: #3b82f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; -webkit-font-smoothing: antialiased; }
+        .flag-btn { transition: all 0.2s ease; cursor: pointer; opacity: 0.6; }
+        .flag-btn:hover, .flag-btn.active { opacity: 1; transform: translateY(-1px); }
         .hidden-section { display: none; }
         html { scroll-behavior: smooth; }
         
-        .btn-blue {
+        .section-standard { padding-top: 5rem; padding-bottom: 5rem; }
+        @media (max-width: 768px) { .section-standard { padding-top: 4rem; padding-bottom: 4rem; } }
+
+        .btn-primary {
             background-color: #1E40AF;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-        .btn-blue:hover {
+        .btn-primary:hover {
             background-color: #1e3a8a;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(30, 64, 175, 0.4);
         }
 
-        .country-link {
-            transition: all 0.2s ease;
+        .country-card {
             border: 1px solid #f1f5f9;
+            transition: all 0.2s ease;
         }
-        .country-link:hover {
+        .country-card:hover {
             border-color: #1E40AF;
             background-color: #f8faff;
-            transform: translateY(-1px);
+        }
+
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            height: 100%;
         }
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #1E40AF; border-radius: 10px; }
-        
-        .legal-content h2 { font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #0f172a; }
-        .legal-content h3 { font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1e293b; }
-        .legal-content p { margin-bottom: 1rem; color: #475569; line-height: 1.6; }
-        .legal-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #475569; }
+
+        h1, h2, h3 { letter-spacing: -0.025em; }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <!-- NOTIFICATION MODAL -->
-    <div id="custom-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center">
+    <div id="custom-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 text-center">
             <div class="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-info-circle text-2xl"></i>
             </div>
@@ -89,198 +107,198 @@
     <!-- MAIN PAGE -->
     <div id="landing-page">
         
-        <!-- TOP ALERT BAR -->
-        <div class="bg-brand-blue text-white text-[10px] md:text-xs font-bold py-2 text-center uppercase tracking-widest px-4">
+        <!-- TOP BAR -->
+        <div class="bg-brand-blue text-white text-[10px] font-bold py-2.5 text-center uppercase tracking-[0.15em] px-4">
             <span data-i18n="top_bar">LIMITED STOCK: 40% OFF + FREE PRIORITY SHIPPING TO YOUR REGION TODAY</span>
         </div>
 
         <!-- NAVIGATION -->
-        <nav class="bg-white px-4 py-3 md:py-4 sticky top-0 z-50 border-b border-slate-100">
+        <nav class="bg-white/95 backdrop-blur-md px-4 py-4 sticky top-0 z-50 border-b border-slate-100">
             <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                    <img src="mancode-logo.png" alt="Mancode Gummies Logo" class="h-7 md:h-10 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
-                </div>
+                <img src="images/mancode-logo.png" alt="Mancode Logo" class="h-6 md:h-8 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
                 
-                <div class="flex items-center gap-2 md:gap-4">
-                    <div class="hidden lg:flex gap-6 text-slate-500 text-[11px] font-bold mr-6 tracking-wider">
-                        <a href="#philosophy" class="hover:text-brand-blue" data-i18n="nav_philosophy">OUR PHILOSOPHY</a>
-                        <a href="#benefits" class="hover:text-brand-blue" data-i18n="nav_benefits">BENEFITS</a>
-                        <a href="#reviews" class="hover:text-brand-blue" data-i18n="nav_reviews">REVIEWS</a>
+                <div class="flex items-center gap-4 lg:gap-8">
+                    <div class="hidden lg:flex gap-6 text-slate-500 text-[11px] font-bold tracking-wider">
+                        <a href="#philosophy" class="hover:text-brand-blue transition-colors">PHILOSOPHY</a>
+                        <a href="#benefits" class="hover:text-brand-blue transition-colors">BENEFITS</a>
+                        <a href="#reviews" class="hover:text-brand-blue transition-colors">REVIEWS</a>
                     </div>
-                    <div class="flex items-center gap-1.5 md:gap-2">
-                        <img src="https://flagcdn.com/w40/ca.png" onclick="setLanguage('en', 'ca')" class="flag-btn h-3.5 md:h-5 rounded-sm shadow-sm" title="Canada">
-                        <img src="https://flagcdn.com/w40/pr.png" onclick="setLanguage('es', 'pr')" class="flag-btn h-3.5 md:h-5 rounded-sm shadow-sm" title="Puerto Rico">
-                        <img src="https://flagcdn.com/w40/au.png" onclick="setLanguage('en', 'au')" class="flag-btn h-3.5 md:h-5 rounded-sm shadow-sm" title="Australia">
-                        <img src="https://flagcdn.com/w40/ie.png" onclick="setLanguage('en', 'ie')" class="flag-btn h-3.5 md:h-5 rounded-sm shadow-sm" title="Ireland">
-                        <img src="https://flagcdn.com/w40/nz.png" onclick="setLanguage('en', 'nz')" class="flag-btn h-3.5 md:h-5 rounded-sm shadow-sm" title="New Zealand">
+                    <div class="flex items-center gap-2">
+                        <img src="https://flagcdn.com/w40/ca.png" onclick="setLanguage('en', 'ca')" class="flag-btn h-3.5 md:h-4 rounded-sm shadow-sm" title="Canada">
+                        <img src="https://flagcdn.com/w40/au.png" onclick="setLanguage('en', 'au')" class="flag-btn h-3.5 md:h-4 rounded-sm shadow-sm" title="Australia">
+                        <img src="https://flagcdn.com/w40/nz.png" onclick="setLanguage('en', 'nz')" class="flag-btn h-3.5 md:h-4 rounded-sm shadow-sm" title="New Zealand">
+                        <img src="https://flagcdn.com/w40/ie.png" onclick="setLanguage('en', 'ie')" class="flag-btn h-3.5 md:h-4 rounded-sm shadow-sm" title="Ireland">
+                        <img src="https://flagcdn.com/w40/pr.png" onclick="setLanguage('es', 'pr')" class="flag-btn h-3.5 md:h-4 rounded-sm shadow-sm" title="Puerto Rico">
                     </div>
                 </div>
             </div>
         </nav>
 
         <!-- HERO SECTION -->
-        <section class="relative w-full min-h-[450px] flex items-center bg-white overflow-hidden border-b border-slate-50">
-            <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50/40 skew-x-[-15deg] translate-x-12 hidden lg:block"></div>
+        <section class="relative w-full min-h-[500px] flex items-center bg-white overflow-hidden border-b border-slate-50">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 skew-x-[-15deg] translate-x-12 hidden lg:block"></div>
             
-            <div class="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center py-10 md:py-16">
+            <div class="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center py-16 md:py-24">
                 <div class="max-w-xl text-center md:text-left">
-                    <div class="inline-flex bg-brand-blue/10 text-brand-blue text-[9px] md:text-[10px] font-black px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded-lg" data-i18n="hero_badge">
+                    <div class="inline-flex bg-brand-blue/10 text-brand-blue text-[10px] font-extrabold px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded-md" data-i18n="hero_badge">
                         Premium Performance Formula
                     </div>
-                    <h1 class="text-slate-900 text-4xl md:text-6xl font-black leading-[1.05] mb-6">
+                    <h1 class="text-slate-900 text-4xl md:text-6xl font-black leading-[1.1] mb-6">
                         Upgrade Your <span class="text-brand-blue">Mancode</span>
                     </h1>
-                    <p class="text-slate-500 text-base md:text-lg font-medium mb-8 leading-relaxed" data-i18n="hero_subtitle">
-                        Consistency, confidence, and control. Support your drive, stamina, and male vitality — all in a simple daily formula.
+                    <p class="text-slate-500 text-lg font-medium mb-10 leading-relaxed max-w-lg" data-i18n="hero_subtitle">
+                        Consistency, confidence, and control. Support your drive, stamina, and male vitality — all in a simple daily gummy.
                     </p>
-                    
-                    <button onclick="scrollToSelection()" class="w-full md:w-auto px-10 py-4 btn-blue text-white font-black text-lg rounded-xl shadow-lg uppercase tracking-widest transition-all">
+                    <button onclick="scrollToSelection()" class="w-full md:w-auto px-12 py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest">
                         <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
                     </button>
+                    <div class="mt-10 flex items-center justify-center md:justify-start gap-4">
+                        <div class="flex text-yellow-400 text-xs gap-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider">Trusted by 25,000+ Men</span>
+                    </div>
                 </div>
-
                 <div class="relative flex justify-center lg:justify-end">
-                    <div class="absolute inset-0 bg-blue-50/60 blur-[100px] rounded-full"></div>
-                    <img src="mancode.png" alt="Mancode Gummies" class="relative z-10 w-full max-w-[240px] md:max-w-[320px] h-auto drop-shadow-xl">
+                    <div class="absolute inset-0 bg-blue-100/40 blur-[100px] rounded-full"></div>
+                    <img src="images/mancode.png" alt="Mancode Product" class="relative z-10 w-full max-w-[280px] md:max-w-[340px] h-auto drop-shadow-2xl">
                 </div>
             </div>
         </section>
 
-        <!-- MINIMAL COUNTRY SELECTION (SECTION 2) -->
-        <section id="country-selection" class="py-12 bg-slate-50 border-b border-slate-100">
+        <!-- COUNTRY SELECTION -->
+        <section id="country-selection" class="py-16 bg-slate-50 border-b border-slate-100">
             <div class="container mx-auto px-4 max-w-2xl text-center">
-                <h2 class="text-xl md:text-2xl font-black text-slate-900 mb-8" data-i18n="select_title">Select Shipping Destination</h2>
-                
+                <h2 class="text-2xl font-black text-slate-900 mb-8" data-i18n="select_title">Select Shipping Destination</h2>
                 <div class="grid grid-cols-2 gap-3">
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/228CL3XL/" class="country-link flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-xl shadow-sm">
-                        <img src="https://flagcdn.com/w40/ca.png" class="w-6 h-auto rounded-sm">
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card flex items-center justify-center gap-3 py-4 px-4 bg-white rounded-xl shadow-sm">
+                        <img src="https://flagcdn.com/w40/ca.png" class="w-6 h-auto" alt="CA">
                         <span class="font-bold text-sm text-slate-900">Canada</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22B1F87M/" class="country-link flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-xl shadow-sm">
-                        <img src="https://flagcdn.com/w80/au.png" class="w-6 h-auto rounded-sm">
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card flex items-center justify-center gap-3 py-4 px-4 bg-white rounded-xl shadow-sm">
+                        <img src="https://flagcdn.com/w40/au.png" class="w-6 h-auto" alt="AU">
                         <span class="font-bold text-sm text-slate-900">Australia</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/228DZZN7/" class="country-link flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-xl shadow-sm">
-                        <img src="https://flagcdn.com/w80/pr.png" class="w-6 h-auto rounded-sm">
+                    <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card flex items-center justify-center gap-3 py-4 px-4 bg-white rounded-xl shadow-sm">
+                        <img src="https://flagcdn.com/w40/pr.png" class="w-6 h-auto" alt="PR">
                         <span class="font-bold text-sm text-slate-900">Puerto Rico</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22C16WXR/" class="country-link flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-xl shadow-sm">
-                        <img src="https://flagcdn.com/w80/ie.png" class="w-6 h-auto rounded-sm">
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card flex items-center justify-center gap-3 py-4 px-4 bg-white rounded-xl shadow-sm">
+                        <img src="https://flagcdn.com/w40/ie.png" class="w-6 h-auto" alt="IE">
                         <span class="font-bold text-sm text-slate-900">Ireland</span>
                     </a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22C2KRND/" class="country-link flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-xl shadow-sm col-span-2 sm:col-span-1 sm:max-w-none max-w-[calc(50%-0.375rem)] mx-auto w-full">
-                        <img src="https://flagcdn.com/w80/nz.png" class="w-6 h-auto rounded-sm">
-                        <span class="font-bold text-sm text-slate-900 text-center">New Zealand</span>
+                    <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card flex items-center justify-center gap-3 py-4 px-4 bg-white rounded-xl shadow-sm col-span-2 sm:col-span-1 sm:max-w-none max-w-[calc(50%-0.375rem)] mx-auto w-full">
+                        <img src="https://flagcdn.com/w40/nz.png" class="w-6 h-auto" alt="NZ">
+                        <span class="font-bold text-sm text-slate-900">New Zealand</span>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- PHILOSOPHY SECTION -->
-        <section id="philosophy" class="py-24 bg-white">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="text-center">
-                    <h2 class="text-brand-blue font-black uppercase tracking-[0.3em] text-[10px] mb-8" data-i18n="phil_header">The Mancode Standard</h2>
-                    <div class="space-y-8 text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
-                        <p data-i18n="phil_1">Performance isn’t about extremes.</p>
-                        <p class="text-slate-400" data-i18n="phil_2">It’s about consistency, confidence, and control.</p>
-                        <p class="text-slate-600 text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto py-6" data-i18n="phil_3">
-                            Mancode Gummies were created for men who want to stay energized, focused, and ready — without complicated routines or aggressive solutions.
-                        </p>
-                        <p class="text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto" data-i18n="phil_4">
-                            A simple daily formula designed to support drive, stamina, and male vitality, so you can perform at your best, on your terms.
-                        </p>
-                        <div class="pt-10 border-t border-slate-100 inline-block w-full">
-                            <p class="text-lg italic font-black text-brand-blue mb-2" data-i18n="phil_5">Because real strength isn’t loud.</p>
-                            <p class="text-3xl font-black text-slate-900 uppercase tracking-tighter" data-i18n="phil_6">It’s reliable.</p>
-                        </div>
+        <section id="philosophy" class="section-standard bg-white">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <span class="text-brand-blue font-black uppercase tracking-[0.3em] text-[10px] mb-6 block" data-i18n="phil_header">The Mancode Standard</span>
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900" data-i18n="phil_1">Performance isn’t about extremes.</h2>
+                    <p class="text-slate-400 text-xl font-bold italic" data-i18n="phil_2">It’s about consistency, confidence, and control.</p>
+                    <div class="h-px bg-slate-100 w-24 mx-auto my-8"></div>
+                    <p class="text-slate-600 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto" data-i18n="phil_3">
+                        Mancode Gummies were created for men who want to stay energized, focused, and ready — without complicated routines or aggressive solutions.
+                    </p>
+                    <p class="text-slate-900 text-lg md:text-xl font-black leading-relaxed max-w-2xl mx-auto py-4" data-i18n="phil_4">
+                        A simple daily formula designed to support drive, stamina, and male vitality, so you can perform at your best, on your terms.
+                    </p>
+                    <div class="pt-8">
+                        <p class="text-lg font-bold text-brand-blue mb-1" data-i18n="phil_5">Real strength isn’t loud.</p>
+                        <p class="text-4xl font-black text-slate-900 tracking-tighter" data-i18n="phil_6">IT’S RELIABLE.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TRUST SECTION (NEW FOR GOOGLE COMPLIANCE) -->
-        <section class="py-12 bg-slate-50">
-            <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="flex flex-col items-center">
-                    <i class="fas fa-vial text-brand-blue text-2xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">Lab Tested</span>
+        <!-- TRUST SECTION -->
+        <section class="py-12 bg-slate-50 border-y border-slate-100">
+            <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <i class="fas fa-flask-vial text-brand-blue text-2xl"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Lab Tested</p>
                 </div>
-                <div class="flex flex-col items-center">
-                    <i class="fas fa-leaf text-brand-blue text-2xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">100% Natural</span>
+                <div class="space-y-2">
+                    <i class="fas fa-leaf text-brand-blue text-2xl"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">100% Natural</p>
                 </div>
-                <div class="flex flex-col items-center">
-                    <i class="fas fa-shield-alt text-brand-blue text-2xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">Secure Payment</span>
+                <div class="space-y-2">
+                    <i class="fas fa-lock text-brand-blue text-2xl"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Secure Payment</p>
                 </div>
-                <div class="flex flex-col items-center">
-                    <i class="fas fa-shipping-fast text-brand-blue text-2xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">Express Delivery</span>
+                <div class="space-y-2">
+                    <i class="fas fa-truck-fast text-brand-blue text-2xl"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-600">Priority Ship</p>
                 </div>
             </div>
         </section>
 
         <!-- BENEFITS -->
-        <section id="benefits" class="py-20 bg-white border-y border-slate-100">
-            <div class="container mx-auto px-4 text-center">
-                <div class="mb-14">
-                    <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-4" data-i18n="benefits_title">Master Your Protocol</h2>
-                    <p class="text-slate-400 font-medium text-sm md:text-base max-w-2xl mx-auto" data-i18n="benefits_sub">Experience the 3-tier optimization system built into every gummy.</p>
+        <section id="benefits" class="section-standard bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="benefits_title">Master Your Protocol</h2>
+                    <p class="text-slate-400 font-medium max-w-2xl mx-auto" data-i18n="benefits_sub">Experience the 3-tier optimization system built into every gummy.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50/30 group hover:border-brand-blue transition-all">
-                        <div class="w-12 h-12 bg-white text-brand-blue rounded-xl flex items-center justify-center mb-6 text-lg shadow-sm group-hover:bg-brand-blue group-hover:text-white transition-all">
-                            <i class="fas fa-bolt"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="premium-card p-10 rounded-2xl group hover:border-brand-blue transition-all">
+                        <div class="w-12 h-12 bg-slate-50 text-brand-blue rounded-lg flex items-center justify-center mb-6 text-xl group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fas fa-bolt-lightning"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-3 text-slate-900" data-i18n="ben_1_t">Constant Surge</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_1_d">Fuel your body with metabolic energy to help manage your demanding schedule effectively.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_1_t">Constant Surge</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_1_d">Fuel your morning and afternoon with metabolic energy to help manage your demanding schedule effectively.</p>
                     </div>
-                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50/30 group hover:border-brand-blue transition-all">
-                        <div class="w-12 h-12 bg-white text-brand-blue rounded-xl flex items-center justify-center mb-6 text-lg shadow-sm group-hover:bg-brand-blue group-hover:text-white transition-all">
+                    <div class="premium-card p-10 rounded-2xl group hover:border-brand-blue transition-all">
+                        <div class="w-12 h-12 bg-slate-50 text-brand-blue rounded-lg flex items-center justify-center mb-6 text-xl group-hover:bg-brand-blue group-hover:text-white transition-all">
                             <i class="fas fa-dumbbell"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-3 text-slate-900" data-i18n="ben_2_t">Peak Vitality</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Designed to contribute to overall male vitality and daily physical drive naturally.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_2_t">Peak Vitality</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Designed to contribute to overall male vitality and daily physical drive naturally and reliably.</p>
                     </div>
-                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50/30 group hover:border-brand-blue transition-all">
-                        <div class="w-12 h-12 bg-white text-brand-blue rounded-xl flex items-center justify-center mb-6 text-lg shadow-sm group-hover:bg-brand-blue group-hover:text-white transition-all">
+                    <div class="premium-card p-10 rounded-2xl group hover:border-brand-blue transition-all">
+                        <div class="w-12 h-12 bg-slate-50 text-brand-blue rounded-lg flex items-center justify-center mb-6 text-xl group-hover:bg-brand-blue group-hover:text-white transition-all">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-3 text-slate-900" data-i18n="ben_3_t">Elite Clarity</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_3_d">Supports cognitive focus and mental drive during high-performance moments.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_3_t">Elite Clarity</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_3_d">Supports cognitive focus and mental drive during high-performance moments in your career and life.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- REVIEWS -->
-        <section id="reviews" class="py-24 bg-slate-50">
-            <div class="container mx-auto px-4 text-center md:text-left">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="rev_title">Real Feedback. Real Power.</h2>
-                    <p class="text-slate-400 font-bold uppercase tracking-widest text-[9px]">25,000+ satisfied members</p>
+        <section id="reviews" class="section-standard bg-slate-50 border-y border-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="rev_title">Community Feedback</h2>
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px]">25,000+ Satisfied Members Worldwide</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-3xl border border-slate-100">
-                        <p class="text-slate-600 italic mb-6 text-sm leading-relaxed">"These gummies are far more convenient than pills. I feel a consistent energy level throughout my workday."</p>
-                        <div class="flex items-center justify-center md:justify-start gap-4">
-                            <img src="https://i.pravatar.cc/100?u=a" class="w-10 h-10 rounded-full shadow-sm">
-                            <div class="text-left"><div class="font-black text-slate-900 text-sm">James L.</div><div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Toronto, CA</div></div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <p class="text-slate-600 italic mb-8 text-sm leading-relaxed">"These gummies are far more convenient than pills. I feel a consistent energy level throughout my workday without any crashes."</p>
+                        <div class="flex items-center gap-3 border-t border-slate-50 pt-6">
+                            <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full" alt="James">
+                            <div><p class="font-black text-slate-900 text-xs">James L.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Toronto, CA</p></div>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl border border-slate-100">
-                        <p class="text-slate-600 italic mb-6 text-sm leading-relaxed">"Impressed by the focus boost. It's subtle but effective. Shipping to Sydney was seamless and quick."</p>
-                        <div class="flex items-center justify-center md:justify-start gap-4">
-                            <img src="https://i.pravatar.cc/100?u=b" class="w-10 h-10 rounded-full shadow-sm">
-                            <div class="text-left"><div class="font-black text-slate-900 text-sm">Mark S.</div><div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Sydney, AU</div></div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <p class="text-slate-600 italic mb-8 text-sm leading-relaxed">"Impressed by the focus boost. It's subtle but highly effective. Shipping to Sydney was seamless and much quicker than I expected."</p>
+                        <div class="flex items-center gap-3 border-t border-slate-50 pt-6">
+                            <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full" alt="Mark">
+                            <div><p class="font-black text-slate-900 text-xs">Mark S.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Sydney, AU</p></div>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl border border-slate-100">
-                        <p class="text-slate-600 italic mb-6 text-sm leading-relaxed">"A reliable addition to my routine. My concentration feels sharper and I appreciate the clean formula."</p>
-                        <div class="flex items-center justify-center md:justify-start gap-4">
-                            <img src="https://i.pravatar.cc/100?u=c" class="w-10 h-10 rounded-full shadow-sm">
-                            <div class="text-left"><div class="font-black text-slate-900 text-sm">Connor D.</div><div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Dublin, IE</div></div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <p class="text-slate-600 italic mb-8 text-sm leading-relaxed">"A reliable addition to my daily routine. My concentration feels sharper and I genuinely appreciate the clean, natural formula."</p>
+                        <div class="flex items-center gap-3 border-t border-slate-50 pt-6">
+                            <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full" alt="Connor">
+                            <div><p class="font-black text-slate-900 text-xs">Connor D.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Dublin, IE</p></div>
                         </div>
                     </div>
                 </div>
@@ -288,71 +306,80 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-white py-16 text-slate-400 border-t border-slate-100 text-center md:text-left">
+        <footer class="bg-white pt-20 pb-12 border-t border-slate-100">
             <div class="container mx-auto px-4 max-w-6xl">
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                    <div class="col-span-1 lg:col-span-2 text-center md:text-left">
-                        <div class="text-xl font-black text-slate-900 italic mb-4 tracking-tighter uppercase">Mancode Gummies</div>
-                        <p class="leading-relaxed mb-6 max-w-sm text-xs mx-auto md:mx-0" data-i18n="footer_story">
-                            Elite performance optimization delivered in high-bioavailability gummies. Scientifically driven for the modern man.
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center md:text-left">
+                    <div class="lg:col-span-2">
+                        <img src="images/mancode-logo.png" class="h-6 mb-6 mx-auto md:mx-0 opacity-80" alt="Mancode">
+                        <p class="text-slate-400 text-xs leading-relaxed max-w-sm mx-auto md:mx-0">
+                            Elite performance optimization delivered in high-bioavailability gummies. Scientifically driven for the modern man who values consistency and quality.
                         </p>
                     </div>
-                    
                     <div>
-                        <h4 class="font-black text-slate-900 mb-4 uppercase text-[9px] tracking-widest">Support</h4>
-                        <ul class="space-y-3 font-bold text-[10px]">
-                            <li><a href="#" onclick="openChat()" class="hover:text-brand-blue uppercase">24/7 Priority Chat</a></li>
-                            <li>HELP@MANCODE.COM</li>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-6">Contact</h4>
+                        <ul class="space-y-4 text-[11px] font-bold text-slate-400">
+                            <li><button onclick="openChat()" class="hover:text-brand-blue transition-colors uppercase">24/7 Priority Support</button></li>
+                            <li>HELP@MANCODEGUMMIES.COM</li>
                         </ul>
                     </div>
-
                     <div>
-                        <h4 class="font-black text-slate-900 mb-4 uppercase text-[9px] tracking-widest">Legal</h4>
-                        <ul class="space-y-3 font-bold text-[10px]">
-                            <li><button onclick="showPolicy('privacy')" class="hover:text-brand-blue uppercase">Privacy Policy</button></li>
-                            <li><button onclick="showPolicy('terms')" class="hover:text-brand-blue uppercase">Terms of Sale</button></li>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-6">Legal</h4>
+                        <ul class="space-y-4 text-[11px] font-bold text-slate-400">
+                            <li><button onclick="showPolicy('privacy')" class="hover:text-brand-blue transition-colors uppercase">Privacy Policy</button></li>
+                            <li><button onclick="showPolicy('terms')" class="hover:text-brand-blue transition-colors uppercase">Terms of Sale</button></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- GOOGLE ADS COMPLIANCE DISCLAIMER -->
-                <div class="border-t border-slate-100 pt-8 mb-8 text-[10px] text-slate-400 leading-relaxed text-center">
-                    <p class="mb-4">*These statements have not been evaluated by the Food and Drug Administration or any other health authority. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary and are not guaranteed. Always consult with a healthcare professional before starting any new dietary supplement.</p>
+                <!-- COMPLIANCE DISCLAIMER -->
+                <div class="border-t border-slate-50 pt-10 mb-10 text-[9px] text-slate-400 leading-relaxed text-center max-w-4xl mx-auto italic">
+                    <p>*These statements have not been evaluated by the Food and Drug Administration or any other health authority. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary based on individual metabolism and consistency. Always consult with a healthcare professional before starting any new dietary supplement.</p>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-bold uppercase tracking-widest">
-                    <p>© 2025 Mancode Performance Group.</p>
-                    <div class="flex gap-4 opacity-30 text-xl grayscale">
-                        <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i><i class="fab fa-cc-paypal"></i>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-slate-50">
+                    <p class="text-[10px] font-black text-slate-400 tracking-widest uppercase">© 2025 Mancode Performance Group.</p>
+                    <div class="flex gap-5 opacity-40 grayscale items-center">
+                        <i class="fab fa-cc-visa text-xl"></i>
+                        <i class="fab fa-cc-mastercard text-xl"></i>
+                        <i class="fab fa-cc-amex text-xl"></i>
+                        <i class="fab fa-cc-paypal text-xl"></i>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- LEGAL PAGES -->
+    <!-- LEGAL PAGES MODAL -->
     <div id="legal-page" class="hidden-section fixed inset-0 z-[150] bg-white overflow-y-auto">
         <div class="border-b border-slate-100 py-6 px-4 sticky top-0 bg-white/95 backdrop-blur-md">
             <div class="container mx-auto max-w-4xl flex justify-between items-center">
-                <div class="font-black text-brand-blue text-lg uppercase tracking-tighter">MANCODE GUMMIES</div>
-                <button onclick="hidePolicy()" class="font-black text-slate-400 hover:text-slate-900 text-xs flex items-center gap-2">
+                <div class="font-black text-brand-blue text-lg tracking-tighter uppercase">MANCODE GUMMIES</div>
+                <button onclick="hidePolicy()" class="font-black text-slate-400 hover:text-slate-900 text-xs flex items-center gap-2 transition-colors">
                     <i class="fas fa-times"></i> CLOSE
                 </button>
             </div>
         </div>
         <div class="container mx-auto max-w-3xl px-6 py-12 md:py-20 legal-content">
-            <!-- Content here from previous version -->
             <div id="privacy-content" class="hidden-section">
-                <!-- Privacy Policy text -->
-                <h1 class="text-3xl font-black text-slate-900 mb-6">Privacy Policy</h1>
+                <h1 class="text-4xl font-black text-slate-900 mb-10">Privacy Policy</h1>
                 <p>This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from the Site.</p>
                 <h2>PERSONAL INFORMATION WE COLLECT</h2>
-                <p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device...</p>
+                <p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device.</p>
+                <h3>Technologies used:</h3>
+                <ul>
+                    <li>"Cookies" are data files that are placed on your device or computer and often include an anonymous unique identifier.</li>
+                    <li>"Log files" track actions occurring on the Site, and collect data including your IP address, browser type, etc.</li>
+                    <li>"Web beacons," "tags," and "pixels" are electronic files used to record information about how you browse the Site.</li>
+                </ul>
             </div>
             <div id="terms-content" class="hidden-section">
-                <!-- Terms text -->
-                <h1 class="text-3xl font-black text-slate-900 mb-6">Terms of Service</h1>
-                <p>By visiting our site and/ or purchasing something from us, you engage in our "Service" and agree to be bound by the following terms and conditions...</p>
+                <h1 class="text-4xl font-black text-slate-900 mb-10">Terms of Service</h1>
+                <h3>OVERVIEW</h3>
+                <p>By visiting our site and/ or purchasing something from us, you engage in our "Service" and agree to be bound by the following terms and conditions.</p>
+                <h3>SECTION 1 - ONLINE STORE TERMS</h3>
+                <p>By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence.</p>
+                <h3>SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h3>
+                <p>We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>
             </div>
         </div>
     </div>
@@ -370,13 +397,13 @@
                 phil_2: "It’s about consistency, confidence, and control.",
                 phil_3: "Mancode Gummies were created for men who want to stay energized, focused, and ready — without complicated routines or aggressive solutions.",
                 phil_4: "A simple daily formula designed to support drive, stamina, and male vitality, so you can perform at your best, on your terms.",
-                phil_5: "Because real strength isn’t loud.",
-                phil_6: "It’s reliable.",
+                phil_5: "Real strength isn’t loud.",
+                phil_6: "IT’S RELIABLE.",
                 benefits_title: "Master Your Protocol",
                 benefits_sub: "Experience the 3-tier optimization system built into every gummy.",
-                ben_1_t: "Constant Surge", ben_1_d: "Fuel your morning and afternoon with clean energy that doesn't cause jitters.",
+                ben_1_t: "Constant Surge", ben_1_d: "Fuel your morning and afternoon with metabolic energy to help manage your schedule.",
                 select_title: "Select Shipping Destination",
-                rev_title: "Real Feedback. Real Power."
+                rev_title: "Community Feedback"
             },
             es: {
                 top_bar: "STOCK LIMITADO: 40% DCTO + ENVÍO PRIORITARIO GRATIS HOY",
@@ -385,12 +412,12 @@
                 hero_subtitle: "Consistencia, confianza y control. Apoya tu energía, resistencia y vitalidad masculina en uma fórmula diaria simple.",
                 cta_button: "PIDE TU SUMINISTRO",
                 phil_header: "El Estándar Mancode",
-                phil_1: "El rendimiento não se trata de extremos.",
-                phil_2: "Se trata de consistencia, confianza y control.",
-                phil_3: "Mancode Gummies foram creadas para hombres que quieren mantenerse con energía y enfocados sin rutinas complicadas.",
-                phil_4: "Una fórmula diaria simple diseñada para apoyar tu vitalidad, para que rindas al máximo, bajo tus términos.",
-                phil_5: "Porque la verdadera fuerza não es ruidosa.",
-                phil_6: "Es confiable.",
+                phil_1: "O rendimento não se trata de extremos.",
+                phil_2: "Trata-se de consistência, confiança e controle.",
+                phil_3: "Mancode Gummies foram criadas para homens que querem se manter energizados e focados sem rotinas complicadas.",
+                phil_4: "Uma fórmula diária simples projetada para sua vitalidade, para que você renda ao máximo, sob seus termos.",
+                phil_5: "A verdadeira força não é ruidosa.",
+                phil_6: "É CONFIÁVEL.",
                 benefits_title: "Domina tu Protocolo",
                 benefits_sub: "Experimenta el sistema de optimización de 3 niveles en cada gomita.",
                 ben_1_t: "Energía Constante", ben_1_d: "Energía limpia para tus mañanas y tardes sin bajones.",
@@ -405,7 +432,6 @@
                 const key = el.getAttribute('data-i18n');
                 if (current[key]) el.innerText = current[key];
             });
-
             document.querySelectorAll('.flag-btn').forEach(btn => btn.classList.remove('active', 'ring-2', 'ring-brand-blue'));
             const active = document.querySelector(`img[src*="/${countryCode}.png"]`);
             if (active) active.classList.add('active', 'ring-2', 'ring-brand-blue');
@@ -426,7 +452,7 @@
         }
 
         function openChat() {
-            showModal("Priority Support", "All elite agents are assisting members. Estimated wait: 2 mins. Please stay on page.");
+            showModal("Priority Support", "All priority agents are busy helping elite members. Estimated wait: 2 mins. Please stay on page.");
         }
 
         function showPolicy(type) {
@@ -444,7 +470,8 @@
         }
 
         window.onload = () => {
-            setLanguage('en', 'ca');
+            const userLang = navigator.language.split('-')[0];
+            setLanguage(userLang === 'es' ? 'es' : 'en', userLang === 'es' ? 'pr' : 'ca');
         };
     </script>
 </body>
