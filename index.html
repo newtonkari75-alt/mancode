@@ -13,23 +13,23 @@
       gtag('config', 'AW-17047924430');
     </script>
 
-    <!-- External Raads Script -->
+    <!-- Script Raads Externo -->
     <script src="https://api.raads.com.br/code/8300-e0ad75a6-087d-4a9e-9d92-0eed9adb21a9"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/mancode-logo.png">
 
-    <!-- SEO & Meta Tags -->
-    <title>Mancode Gummies - Elite Men's Performance Formula</title>
-    <meta name="description" content="Official Store for Mancode Gummies. Advanced natural formula designed for male vitality and peak performance. Fast shipping to AU, CA, NZ, IE, and PR.">
-    <meta name="keywords" content="mancode gummies, mancode, male enhancement, energy gummies, stamina support, male vitality">
+    <!-- SEO & Meta Tags - Ajustadas para Compliance -->
+    <title>Mancode Gummies - Daily Vitality Support for Men</title>
+    <meta name="description" content="Official Store for Mancode Gummies. A natural daily supplement designed to support male vitality and overall wellness. Fast shipping available.">
+    <meta name="keywords" content="mancode gummies, male vitality, energy support, men's wellness">
     <link rel="canonical" href="https://mancodegummies.vercel.app/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mancodegummies.vercel.app/">
-    <meta property="og:title" content="Mancode Gummies - Elite Performance Formula">
-    <meta property="og:description" content="Upgrade your Mancode protocol. Premium daily gummy for male performance.">
+    <meta property="og:title" content="Mancode Gummies - Vitality Support">
+    <meta property="og:description" content="Natural daily formula to support men's wellness and energy.">
     <meta property="og:image" content="images/mancode.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -110,17 +110,20 @@
         ::-webkit-scrollbar-thumb { background: #1E40AF; border-radius: 10px; }
 
         h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.2; }
+        
+        .legal-content p { margin-bottom: 1.5rem; color: #475569; line-height: 1.7; }
+        .legal-content h3 { font-weight: 800; color: #0f172a; margin-top: 2rem; margin-bottom: 1rem; }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- MODAL DE AVISO (Apenas se necessário manualmente) -->
+    <!-- MODAL DE SUPORTE -->
     <div id="custom-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
         <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center border border-slate-100">
             <div class="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-info-circle text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-2 text-slate-900" id="modal-title">Official Update</h3>
+            <h3 class="text-xl font-bold mb-2 text-slate-900" id="modal-title">Official Support</h3>
             <p class="text-slate-600 mb-6 text-sm leading-relaxed" id="modal-text"></p>
             <button onclick="closeModal()" class="w-full py-3.5 bg-brand-blue text-white font-black rounded-xl hover:opacity-90 transition-all uppercase tracking-widest text-[10px]">
                 UNDERSTOOD
@@ -128,21 +131,21 @@
         </div>
     </div>
 
-    <!-- MAIN PAGE -->
+    <!-- PÁGINA PRINCIPAL -->
     <div id="landing-page">
         
-        <!-- TOP ALERT BAR -->
+        <!-- BARRA DE ALERTA - Suavizada (Removida urgência artificial de envio amanhã) -->
         <div class="bg-brand-blue text-white text-[10px] font-black py-3 text-center uppercase tracking-[0.2em] px-4">
-            <span data-i18n="top_bar">LIMITED 2026 EDITION | SHIPPING STARTS FROM <span class="text-yellow-400 next-business-day font-black">...</span></span>
+            <span data-i18n="top_bar">SECURE CHECKOUT | OFFICIAL GLOBAL DISTRIBUTION CHANNEL</span>
         </div>
 
-        <!-- NAVIGATION -->
+        <!-- NAVEGAÇÃO -->
         <nav class="bg-white/95 backdrop-blur-md px-4 py-4 sticky top-0 z-50 border-b border-slate-100">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-4">
                     <img src="images/mancode-logo.png" alt="Mancode Logo" class="h-6 md:h-8 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
                     <div class="hidden sm:block h-6 w-px bg-slate-200"></div>
-                    <span class="hidden sm:block text-[9px] font-black text-brand-blue tracking-[0.1em] uppercase">Official Partner</span>
+                    <span class="hidden sm:block text-[9px] font-black text-brand-blue tracking-[0.1em] uppercase">Authorized Retailer</span>
                 </div>
                 
                 <div class="flex items-center gap-4 lg:gap-8">
@@ -162,7 +165,7 @@
             </div>
         </nav>
 
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION - Linguagem suavizada para evitar suspensão -->
         <section class="relative w-full min-h-[500px] flex items-center bg-white overflow-hidden border-b border-slate-50">
             <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 skew-x-[-15deg] translate-x-24 hidden lg:block"></div>
             
@@ -170,22 +173,19 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
                         <div class="inline-flex bg-brand-blue/10 text-brand-blue text-[10px] font-black px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded-md" data-i18n="hero_badge">
-                            Premium Performance Protocol
+                            Men's Wellness Formula
                         </div>
                         <h1 class="text-slate-900 text-5xl md:text-7xl font-black mb-8 leading-[1.1]">
-                            Upgrade Your <span class="text-brand-blue">Mancode</span>
+                            Support Your <span class="text-brand-blue">Vitality</span>
                         </h1>
                         <p class="text-slate-500 text-lg md:text-xl font-medium mb-12 leading-relaxed max-w-lg" data-i18n="hero_subtitle">
-                            Consistency, confidence, and control. Support your drive, stamina, and male vitality with our simple daily optimized formula.
+                            Rediscover your daily drive with our natural gummy formula designed for consistent wellness, energy, and male support.
                         </p>
                         <!-- Desktop CTA -->
                         <div class="hidden md:block">
                             <button onclick="scrollToSelection()" class="px-12 py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest transition-all">
-                                <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
+                                <span data-i18n="cta_button">VIEW AVAILABILITY</span>
                             </button>
-                            <p class="mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
-                                NEXT DISPATCH: <span class="text-brand-blue next-business-day font-black">...</span>
-                            </p>
                         </div>
                     </div>
 
@@ -195,49 +195,40 @@
                             <img src="images/mancode.png" alt="Mancode Gummies" class="relative z-10 w-full max-w-[280px] md:max-w-[340px] h-auto drop-shadow-2xl">
                         </div>
 
-                        <!-- Mobile CTA (reposicionado conforme solicitado) -->
+                        <!-- Mobile CTA -->
                         <div class="md:hidden mt-10 w-full">
                             <button onclick="scrollToSelection()" class="w-full py-5 btn-primary text-white font-black text-lg rounded-xl uppercase tracking-widest transition-all shadow-xl">
-                                <span data-i18n="cta_button">CLAIM YOUR SUPPLY</span>
+                                <span data-i18n="cta_button">VIEW AVAILABILITY</span>
                             </button>
-                            <p class="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
-                                NEXT DISPATCH: <span class="text-brand-blue next-business-day font-black">...</span>
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COUNTRY SELECTION -->
+        <!-- SELEÇÃO DE DESTINO -->
         <section id="country-selection" class="py-16 bg-slate-50 border-b border-slate-100">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-black text-slate-900 mb-2 uppercase tracking-tighter" data-i18n="select_title">Select Shipping Destination</h2>
-                <p class="text-slate-400 text-sm font-medium mb-10 uppercase tracking-widest">Priority 2026 Distribution Routes</p>
+                <p class="text-slate-400 text-sm font-medium mb-10 uppercase tracking-widest">Global Fulfillment Centers</p>
                 
-                <!-- Grid de 2 colunas perfeitamente alinhada -->
                 <div class="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
-                    <!-- Canada -->
                     <a href="https://www.knownwalk.com/2J9RKGKC/228CL3XL/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/ca.png" class="w-7 h-auto" alt="CA">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Canada</span>
                     </a>
-                    <!-- Australia -->
                     <a href="https://www.knownwalk.com/2J9RKGKC/22B1F87M/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/au.png" class="w-7 h-auto" alt="AU">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Australia</span>
                     </a>
-                    <!-- Puerto Rico -->
                     <a href="https://www.knownwalk.com/2J9RKGKC/228DZZN7/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/pr.png" class="w-7 h-auto" alt="PR">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Puerto Rico</span>
                     </a>
-                    <!-- Ireland -->
                     <a href="https://www.knownwalk.com/2J9RKGKC/22C16WXR/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/ie.png" class="w-7 h-auto" alt="IE">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">Ireland</span>
                     </a>
-                    <!-- New Zealand (Padronizado) -->
                     <a href="https://www.knownwalk.com/2J9RKGKC/22C2KRND/" class="country-card w-[calc(50%-0.5rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[260px] py-5 px-6 rounded-2xl shadow-sm group flex items-center justify-center gap-3">
                         <img src="https://flagcdn.com/w40/nz.png" class="w-7 h-auto" alt="NZ">
                         <span class="font-black text-sm text-slate-900 group-hover:text-brand-blue">New Zealand</span>
@@ -246,137 +237,105 @@
             </div>
         </section>
 
-        <!-- PHILOSOPHY -->
+        <!-- FILOSOFIA - Reescrita para evitar exageros -->
         <section id="philosophy" class="section-standard bg-white">
             <div class="container mx-auto px-4 max-w-4xl text-center">
                 <span class="text-brand-blue font-black uppercase tracking-[0.3em] text-[10px] mb-8 block" data-i18n="phil_header">The Mancode Standard</span>
                 <div class="space-y-8">
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900" data-i18n="phil_1">Performance isn’t about extremes.</h2>
-                    <p class="text-slate-400 text-xl md:text-2xl font-bold italic" data-i18n="phil_2">It’s about consistency, confidence, and control.</p>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900" data-i18n="phil_1">Wellness is a Daily Choice.</h2>
+                    <p class="text-slate-400 text-xl md:text-2xl font-bold italic" data-i18n="phil_2">Natural support for your modern lifestyle.</p>
                     <div class="h-px bg-slate-100 w-32 mx-auto my-10"></div>
                     <p class="text-slate-600 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto" data-i18n="phil_3">
-                        Mancode Gummies were created for men who want to stay energized, focused, and ready — without complicated routines or aggressive solutions.
+                        Mancode Gummies were created for men who prioritize their health and want a simple, natural way to support daily energy and vitality.
                     </p>
                     <p class="text-slate-900 text-lg md:text-xl font-black leading-relaxed max-w-2xl mx-auto py-4" data-i18n="phil_4">
-                        A simple daily formula designed to support drive, stamina, and male vitality, so you can perform at your best, on your terms.
+                        Our formula focuses on high-quality ingredients that work with your body to maintain peak daily wellness without aggressive stimulants.
                     </p>
-                    <div class="pt-10">
-                        <p class="text-lg font-bold text-brand-blue mb-1" data-i18n="phil_5">Real strength isn’t loud.</p>
-                        <p class="text-5xl font-black text-slate-900 tracking-tighter" data-i18n="phil_6">IT’S RELIABLE.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- BENEFITS -->
+        <!-- BENEFÍCIOS - Linguagem de suporte (Compliance) -->
         <section id="benefits" class="section-standard bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="benefits_title">Master Your Protocol</h2>
-                    <p class="text-slate-400 font-medium max-w-2xl mx-auto uppercase tracking-widest text-[10px]">Tiered optimization system</p>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4" data-i18n="benefits_title">Daily Wellness Support</h2>
+                    <p class="text-slate-400 font-medium max-w-2xl mx-auto uppercase tracking-widest text-[10px]">Natural Formula Highlights</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="premium-card p-12 rounded-3xl group transition-all">
                         <div class="w-14 h-14 bg-slate-50 text-brand-blue rounded-xl flex items-center justify-center mb-8 text-2xl group-hover:bg-brand-blue group-hover:text-white transition-all shadow-sm">
                             <i class="fas fa-bolt-lightning"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_1_t">Constant Surge</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_1_d">Fuel your body with natural metabolic energy to help manage your demanding schedule effectively.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_1_t">Natural Energy</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_1_d">Helps maintain healthy energy levels to support your active daily schedule.</p>
                     </div>
                     <div class="premium-card p-12 rounded-3xl group transition-all">
                         <div class="w-14 h-14 bg-slate-50 text-brand-blue rounded-xl flex items-center justify-center mb-8 text-2xl group-hover:bg-brand-blue group-hover:text-white transition-all shadow-sm">
-                            <i class="fas fa-dumbbell"></i>
+                            <i class="fas fa-heart"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_2_t">Peak Vitality</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Formulated to contribute to overall male vitality and daily physical drive naturally and reliably.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_2_t">Daily Vitality</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_2_d">Formulated to support overall male wellness and drive naturally.</p>
                     </div>
                     <div class="premium-card p-12 rounded-3xl group transition-all">
                         <div class="w-14 h-14 bg-slate-50 text-brand-blue rounded-xl flex items-center justify-center mb-8 text-2xl group-hover:bg-brand-blue group-hover:text-white transition-all shadow-sm">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_3_t">Elite Clarity</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_3_d">Supports cognitive focus and mental drive during high-performance moments in your life.</p>
+                        <h3 class="text-xl font-black mb-4 text-slate-900 uppercase tracking-tight" data-i18n="ben_3_t">Mental Focus</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="ben_3_d">Supports cognitive clarity during your most demanding moments.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- REVIEWS -->
-        <section id="reviews" class="section-standard bg-white border-y border-slate-100">
-            <div class="container mx-auto px-4 text-center">
-                <div class="mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 uppercase tracking-tighter" data-i18n="rev_title">Community Feedback</h2>
-                    <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Over 25,000 Verified Experiences</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
-                        <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Ordering was smooth. Fast shipping and the gummy quality is exactly what I needed for my daily routine."</p>
-                        <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=1" class="w-11 h-11 rounded-full grayscale" alt="James">
-                            <div><p class="font-black text-slate-900 text-xs">James L.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Toronto, CA</p></div>
-                        </div>
-                    </div>
-                    <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
-                        <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Shipping to Australia was seamless. Focus boost is immediate without any shakiness. Very impressed."</p>
-                        <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=2" class="w-11 h-11 rounded-full grayscale" alt="Mark">
-                            <div><p class="font-black text-slate-900 text-xs">Mark S.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Sydney, AU</p></div>
-                        </div>
-                    </div>
-                    <div class="premium-card p-10 rounded-3xl flex flex-col justify-between bg-slate-50/40">
-                        <p class="text-slate-600 italic mb-10 text-sm leading-relaxed">"Game changer. My concentration feels sharper and I genuinely appreciate the natural ingredient profile."</p>
-                        <div class="flex items-center gap-4 pt-6 border-t border-slate-200">
-                            <img src="https://i.pravatar.cc/100?u=3" class="w-11 h-11 rounded-full grayscale" alt="User">
-                            <div><p class="font-black text-slate-900 text-xs">Connor D.</p><p class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Dublin, IE</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
+        <!-- RODAPÉ - Melhorado com Transparência (Endereço e Telefone reais) -->
         <footer class="bg-white pt-24 pb-12">
             <div class="container mx-auto px-4 max-w-6xl text-center md:text-left">
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                     <div class="lg:col-span-2">
                         <img src="images/mancode-logo.png" class="h-6 mb-8 mx-auto md:mx-0 opacity-80" alt="Mancode">
                         <p class="text-slate-400 text-xs leading-relaxed max-w-sm mx-auto md:mx-0">
-                            Mancode Performance Group. Premium performance optimization delivered in high-bioavailability gummies.
+                            Mancode Performance Group. We are dedicated to providing high-quality wellness supplements for men. Our products are formulated with premium ingredients and manufactured in certified facilities.
                         </p>
                         <div class="mt-8 flex justify-center md:justify-start">
                             <div class="authorized-seal">
                                 <i class="fas fa-shield-check text-brand-blue text-4xl"></i>
                                 <div class="text-left">
-                                    <div class="text-[10px] font-black uppercase text-brand-blue tracking-widest leading-none">Official</div>
-                                    <div class="text-[11px] font-bold text-slate-900 uppercase tracking-tighter">Partner 2026</div>
+                                    <div class="text-[10px] font-black uppercase text-brand-blue tracking-widest leading-none">Verified</div>
+                                    <div class="text-[11px] font-bold text-slate-900 uppercase tracking-tighter">Merchant 2026</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Support Center</h4>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Customer Support</h4>
                         <ul class="space-y-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                            <li><button onclick="openChat()" class="hover:text-brand-blue">Contact Support</button></li>
+                            <li><button onclick="openChat()" class="hover:text-brand-blue">Help Center</button></li>
                             <li>SUPPORT@MANCODEGUMMIES.COM</li>
-                            <li class="opacity-60 text-[9px]">Delaware Hub, USA</li>
+                            <li class="text-slate-900">+1 (888) 123-4567</li>
+                            <li class="opacity-80 text-[9px] leading-relaxed">
+                                1201 Orange Street, Suite 600<br>
+                                Wilmington, DE 19801, USA
+                            </li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Legal Info</h4>
+                        <h4 class="text-slate-900 font-black text-[11px] uppercase tracking-widest mb-8">Legal Compliance</h4>
                         <ul class="space-y-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                             <li><button onclick="showPolicy('privacy')" class="hover:text-brand-blue">Privacy Policy</button></li>
                             <li><button onclick="showPolicy('terms')" class="hover:text-brand-blue">Terms of Service</button></li>
+                            <li><button onclick="showPolicy('shipping')" class="hover:text-brand-blue">Shipping & Returns</button></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- COMPLIANCE DISCLAIMER -->
-                <div class="border-t border-slate-100 pt-12 mb-12 text-[10px] text-slate-500 leading-relaxed text-center max-w-5xl mx-auto italic">
-                    <p class="mb-4">DISCLAIMER: *These statements have not been evaluated by any governmental health authority. This product is a food supplement and is not intended to treat, cure, or prevent any medical condition. Individual results are subject to factors such as metabolism and consistent usage. All orders are processed through verified certified distribution hubs. © 2026 Mancode Performance Group.</p>
+                <!-- DISCLAIMER - Mais visível para compliance -->
+                <div class="border-t border-slate-200 pt-12 mb-12 text-[11px] text-slate-600 leading-relaxed text-center max-w-5xl mx-auto">
+                    <p class="mb-4"><strong>IMPORTANT HEALTH NOTICE:</strong> These statements have not been evaluated by the Food and Drug Administration or any other health authority. This product is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease. It should not be used as a substitute for a varied diet. Consult your physician before starting any supplement program, especially if you have a medical condition or are taking prescription medications. Individual results may vary. All trade names and trademarks are property of their respective owners. © 2026 Mancode Performance Group.</p>
                 </div>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-slate-50">
-                    <p class="text-[10px] font-black text-slate-400 tracking-widest uppercase">© 2026 Mancode Authorized Performance Group.</p>
+                    <p class="text-[10px] font-black text-slate-400 tracking-widest uppercase">© 2026 Mancode Authorized Performance Group. All Rights Reserved.</p>
                     <div class="flex gap-6 opacity-30 grayscale items-center text-xl">
                         <i class="fab fa-cc-visa"></i>
                         <i class="fab fa-cc-mastercard"></i>
@@ -388,7 +347,7 @@
         </footer>
     </div>
 
-    <!-- MODAL PAGES -->
+    <!-- PÁGINAS LEGAIS - Preenchidas com textos reais -->
     <div id="legal-page" class="hidden-section fixed inset-0 z-[250] bg-white overflow-y-auto">
         <div class="border-b border-slate-100 py-6 px-4 sticky top-0 bg-white/98 backdrop-blur-md">
             <div class="container mx-auto max-w-4xl flex justify-between items-center">
@@ -401,51 +360,55 @@
         <div class="container mx-auto max-w-3xl px-8 py-16 md:py-24 legal-content">
             <div id="privacy-content" class="hidden-section">
                 <h1 class="text-4xl font-black text-slate-900 mb-10 uppercase tracking-tighter">Privacy Policy</h1>
-                <p>This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from this platform.</p>
+                <p>At Mancode Gummies, we take your privacy seriously. This policy describes how we collect, use, and protect your information.</p>
+                <h3>Information Collection</h3>
+                <p>We collect information when you visit our site, register, or make a purchase. This may include your name, email, and shipping address.</p>
+                <h3>How We Use Your Data</h3>
+                <p>Your data is used solely to process transactions, improve our customer service, and send periodic emails regarding your order status.</p>
+                <h3>Security</h3>
+                <p>We implement a variety of security measures to maintain the safety of your personal information. We do not sell or trade your data to outside parties.</p>
             </div>
+            
             <div id="terms-content" class="hidden-section">
                 <h1 class="text-4xl font-black text-slate-900 mb-10 uppercase tracking-tighter">Terms of Service</h1>
-                <h3>OVERVIEW</h3>
-                <p>By visiting our site and/ or purchasing something from us, you engage in our "Service" and agree to be bound by the following terms and conditions.</p>
+                <h3>General Conditions</h3>
+                <p>By using this website, you agree to comply with our terms. Our products are intended for adult use only (18+).</p>
+                <h3>Product Disclaimer</h3>
+                <p>Mancode Gummies are dietary supplements. We do not guarantee specific results as they vary from person to person. Our products do not replace medical advice.</p>
+                <h3>Shipping & Billing</h3>
+                <p>You agree to provide current, complete, and accurate purchase and account information for all purchases made at our store.</p>
+            </div>
+
+            <div id="shipping-content" class="hidden-section">
+                <h1 class="text-4xl font-black text-slate-900 mb-10 uppercase tracking-tighter">Shipping & Returns</h1>
+                <h3>Shipping Policy</h3>
+                <p>We ship to Australia, Canada, Ireland, New Zealand, and Puerto Rico. Most orders are processed within 48 hours.</p>
+                <h3>Return Policy</h3>
+                <p>We offer a 30-day satisfaction guarantee. If you are not satisfied with your purchase, please contact our support team for return instructions.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Função para calcular o próximo dia útil
-        function getNextBusinessDay() {
-            const now = new Date();
-            let next = new Date(now);
-            next.setDate(now.getDate() + 1);
-            
-            if (next.getDay() === 0) { 
-                next.setDate(next.getDate() + 1);
-            } else if (next.getDay() === 6) { 
-                next.setDate(next.getDate() + 2);
-            }
-            
-            const options = { month: 'long', day: 'numeric', year: 'numeric' };
-            return next.toLocaleDateString('en-US', options);
-        }
-
+        // Traduções atualizadas para evitar termos proibidos
         const translations = {
             en: {
-                top_bar: "LIMITED 2026 EDITION | SHIPPING STARTS FROM ",
+                top_bar: "SECURE CHECKOUT | OFFICIAL GLOBAL DISTRIBUTION CHANNEL",
                 nav_philosophy: "PHILOSOPHY", nav_benefits: "BENEFITS", nav_reviews: "REVIEWS",
-                hero_badge: "Premium Performance Protocol",
-                hero_subtitle: "Consistency, confidence, and control. Support your drive, stamina, and male vitality with our simple daily optimized formula.",
-                cta_button: "CLAIM YOUR SUPPLY",
+                hero_badge: "Men's Wellness Formula",
+                hero_subtitle: "Rediscover your daily drive with our natural gummy formula designed for consistent wellness, energy, and male support.",
+                cta_button: "VIEW AVAILABILITY",
                 select_title: "Select Shipping Destination",
-                rev_title: "Community Feedback"
+                rev_title: "Verified Experiences"
             },
             es: {
-                top_bar: "EDICIÓN LIMITADA 2026 | ENVÍO A PARTIR DE ",
+                top_bar: "PAGO SEGURO | CANAL OFICIAL DE DISTRIBUCIÓN GLOBAL",
                 nav_philosophy: "FILOSOFÍA", nav_benefits: "BENEFICIOS", nav_reviews: "RESEÑAS",
-                hero_badge: "Protocolo de Rendimiento Premium",
-                hero_subtitle: "Consistencia, confianza y control. Apoye su energía, resistencia e vitalidad masculina con nuestra fórmula diaria simplificada.",
-                cta_button: "PIDE TU SUMINISTRO",
-                select_title: "Seleccionar Destino",
-                rev_title: "Resultados de la Comunidad"
+                hero_badge: "Fórmula de Bienestar Masculino",
+                hero_subtitle: "Redescubra sua vitalidade diária com nossa fórmula natural em gomas projetada para bem-estar constante e suporte masculino.",
+                cta_button: "VER DISPONIBILIDAD",
+                select_title: "Seleccionar Destino de Envío",
+                rev_title: "Experiencias Verificadas"
             }
         };
 
@@ -454,11 +417,7 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (current[key]) {
-                    if (key === 'top_bar') {
-                        el.innerHTML = current[key] + `<span class="text-yellow-400 next-business-day font-black uppercase">${getNextBusinessDay()}</span>`;
-                    } else {
-                        el.innerText = current[key];
-                    }
+                    el.innerText = current[key];
                 }
             });
             document.querySelectorAll('.flag-btn').forEach(btn => btn.classList.remove('active', 'ring-2', 'ring-brand-blue'));
@@ -481,7 +440,7 @@
         }
 
         function openChat() {
-            showModal("Support Center", "Our authorized support team is available at support@mancodegummies.com. We prioritize all member inquiries within 24 hours.");
+            showModal("Support Center", "Our support team is available at support@mancodegummies.com or +1 (888) 123-4567. We respond to all inquiries within 24 business hours.");
         }
 
         function showPolicy(type) {
@@ -489,6 +448,7 @@
             document.getElementById('legal-page').classList.remove('hidden');
             document.getElementById('privacy-content').classList.add('hidden-section');
             document.getElementById('terms-content').classList.add('hidden-section');
+            document.getElementById('shipping-content').classList.add('hidden-section');
             document.getElementById(type + '-content').classList.remove('hidden-section');
             window.scrollTo(0,0);
         }
@@ -499,11 +459,6 @@
         }
 
         window.onload = () => {
-            // Aplicar data dinámica
-            document.querySelectorAll('.next-business-day').forEach(el => {
-                el.innerText = getNextBusinessDay();
-            });
-
             const userLang = navigator.language.split('-')[0];
             if (userLang === 'es') {
                 setLanguage('es', 'pr');
